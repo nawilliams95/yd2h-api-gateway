@@ -5,7 +5,7 @@ const router = require('./routers/router');
 app.use(express.json());
 
 app.get('/', (req, res) => {
-    res.send("Simple API Gateway")
+    res.send("Simple API Gateway For YD2H")
 })
 
 app.use(router)
