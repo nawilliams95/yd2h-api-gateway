@@ -14,6 +14,13 @@ taggingRouter.get('/tags', (req, res) => {
     })
 })
 
+//NAME INDEX
+taggingRouter.get('/tags/:name', (req, res) => {
+    api.get(req.path).then(resp => {
+        res.send(resp.data)
+    })
+})
+
 //SHOW
 taggingRouter.get('/tags/:id', (req, res) => {
     api.get(req.path).then(resp => {
