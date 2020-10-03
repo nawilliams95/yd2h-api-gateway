@@ -21,8 +21,8 @@ userRouter.get('/users/:id', (req, res) => {
     })
 })
 
-//CREATE
-userRouter.post('/users', (req, res) => {
+//SIGN_UP
+userRouter.post('/users/signup', (req, res) => {
    api.get(req.path).then(resp => {
         res.send(resp.data)
     })
@@ -33,6 +33,13 @@ userRouter.post('/users/login', (req, res) => {
      api.get(req.path).then(resp => {
         res.send(resp.data)
     })
+})
+
+//PROFILE
+userRouter.get('/users/profile/:username', (req, res) => {
+    api.get(req.path).then(resp => {
+       res.send(resp.data)
+   })
 })
 
 //UPDATE
