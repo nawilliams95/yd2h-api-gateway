@@ -28,6 +28,13 @@ userCmsRouter.get('/posts/by/:user_id', (req, res) => {
     })
 })
 
+//3 RANDOM POSTS
+userCmsRouter.get('/posts/random', (req, res) => {
+    api.get(req.path).then(resp => {
+        res.send(resp.data)
+    })
+})
+
 //SHOW
 userCmsRouter.get('/posts/:id', (req, res) => {
     api.get(req.path).then(resp => {

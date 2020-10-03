@@ -65,6 +65,13 @@ adminRouter.get('/admin/posts', (req, res) => {
     })
 })
 
+//3 RANDOM POSTS
+adminRouter.get('/admin/posts/random', (req, res) => {
+    api.get(req.path).then(resp => {
+        res.send(resp.data)
+    })
+})
+
 
 //SHOW
 adminRouter.get('/admin/posts/:id', (req, res) => {
