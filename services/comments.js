@@ -14,6 +14,14 @@ commentsRouter.get('/comments', (req, res) => {
     })
 })
 
+//COMMENTS BY POST ID
+commentsRouter.get('/comments/:post_id/post', (req, res) => {
+    api.get(req.path).then(resp => {
+        res.send(resp.data)
+    })
+})
+
+
 
 //SHOW
 commentsRouter.get('/comments/:id', (req, res) => {
